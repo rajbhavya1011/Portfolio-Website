@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Afacad, sans-serif;
+    line-height: 1.6;
+    background-size: cover;
+    background-color: rgb(16, 14, 14);
+}
+
+#container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ee9f27;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    transition: all 1s ease-out;
+    color: black;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    color : rgb(238, 174, 64);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../media/images/cyborg_technology.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header > p {
+    font-size: 64px;
+    padding-left: 20px;
+    text-shadow: #ffffff 0px 0px 15px;
+}
+
+#profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 10px solid #de7c1a;
+    box-shadow: 0 0 10px #444444;
+}
+section {
+    padding: 20px;
+    border-bottom: 1px solid #ddd; 
+}
+
+section > h2 {
+    color: #de7c1a;
+    text-shadow: #ffffff 0px 0px 15px;
+}
+
+section > p {
+    font-size: 20px;
+}
+
+#about {
+    margin-top: 100vh;
+    color : #de7c1a;
+    text-shadow: #ffffff 0px 0px 15px;
+    /* background-image: url("../media/images/background.jpeg") ; */
+    background-size: cover;
+    background-attachment: fixed;
+}
+.photo-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0; 
+}
+/* .photo-grid img {
+    flex: 0 0 auto;
+    width: auto;
+    height: 300px;
+    border: 1px solid #ddd;
+} */
+.photo-grid img {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    height: 300px;
+    background-color: #0000ff;
+    transition:
+      width 2s,
+      height 2s,
+      background-color 2s,
+      rotate 1s;
+  }
+
+  .photo-grid img:hover {
+    rotate: 360deg;
+    transform: scale(1.5);
+  }
+  
+.photo-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.photo-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+td img {
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+/* tr:nth-child(even) {
+    background-color: #f9f9f9;
+} */
+tr{
+    color : white;
+    box-shadow: inset 0px -3px 100px #de7c1a;
+}
+tr:hover {
+    color : black;
+    background-color: #de7c1a;
+}
+
+table th:first-child, table td:first-child {
+    width: 15%;
+}
+
+table th:nth-child(2), table td:nth-child(2) {
+    width: calc(100% - 15%);
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+}
